@@ -75,3 +75,8 @@ Then enter to the url bellow and a Login page will appear. Login with your Googl
 The rest is explained in the page
 
 [![Foo](http://img43.imageshack.us/img43/3857/capturadepantalla201303n.png)](http://google.com.au/)
+
+## Pending changes
+Option to choose dev or dist in web form
+
+SQLite database by default
