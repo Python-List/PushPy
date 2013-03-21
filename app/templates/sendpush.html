@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{%  block body %}
+Bienvenido a la página de envío de notificaciones push. Por favor ten precaución ya que en el preciso momento
+    en el que pulsas el botón envíar, estas generando una notificación a todos los usuarios seleccionados.
+    La composición de la notificación es bien sencilla.<br>
+    - <b>Campo selección idioma:</b> Con la selección del idioma enviarás la notificación únicamente a los usuarios con este idioma.<br>
+    - <b>Campo de texto:</b> Este será el texto propiamente dicho que se enviará en la notificación<br>
+    <form action="" method="post" name="sendpush" class="form-horizontal">
+        <br>
+        <div class="row">
+        <div class="span3 offset2">
+            <div class="control-group">
+        Introduce el mensaje:<br>
+        {{form.msj(size=107)}}<br>
+        Mínimo 20 caracteres, máximo 107<br>
+        Introduce el movieID:<br>
+        {{form.movieID(size=107)}}<br>
+        Introduce el youtubeID:<br>
+        {{form.videoID(size=107)}}<br>
+        </div>
+        {% for error in form.errors.openid %}
+            <span style="color: #ff0000;">[{{error}}]</span>
+        {% endfor %}<br>
+        <div class="control-group">
+        Selecciona el idioma<br>
+        {{ form.language }}<br>
+        </div>
+        {%  with messages= get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="text-success">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}<br>
+        </div>
+        </div>
+        <p><input type="submit" class="btn btn-large btn-block btn-primary" value="Enviar"></p>
+    </form>
+
+{% endblock %}
