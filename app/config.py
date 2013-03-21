@@ -1,8 +1,8 @@
 import os
 dbhost= 'localhost'
 dbuser= 'root'
-dbpass= 'nomasandroid42'
-dbname= 'yonkidb'
+dbpass= ''
+dbname= ''
 DB_URI= 'mysql://'+ dbuser + ':' + dbpass + '@' + dbhost + '/' + dbname
 CSRF_ENABLED = True
 SECRET_KEY = '0B137449663DACC4C92289E8867CBEE7A2915B4975B013CA3DC187F14AF0B800'
