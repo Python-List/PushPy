@@ -12,6 +12,7 @@ class pushclass(object):
         import binascii
         # the certificate file generated from Provisioning Portal
         certfile= os.path.abspath(os.path.dirname(__file__))+ '/dev.pem'
+        #certfile= os.path.abspath(os.path.dirname(__file__))+ '/dist.pem'
 
 
         # APNS server address (use 'gateway.push.apple.com' for production server)
@@ -23,7 +24,7 @@ class pushclass(object):
         sock.connect(apns_address)
         # generate APNS notification packet
         #print 'Enviando notificaciones a '+str(len(tokens)) +" usuarios"
-        flash('Notificaciones enviadas a '+str(len(tokens)) +" usuarios")
+        flash('Notifications sent to '+str(len(tokens)) +" users")
         for user in tokens:
             token = binascii.unhexlify(user.token)
             fmt = "!cH32sH{0:d}s".format(len(payload))
@@ -32,7 +33,3 @@ class pushclass(object):
             sock.write(msg)
         sock.close()
         s.close()
-
-if __name__ == '__main__':
-    payload = {"aps": {"alert" : "Esto es una notificacion de prueba", "badge": 1, "sound": "sound.caff"}}
-    send_push_message(tokens=["17d8b453f18472c44232bd6e1232ddb0da48fd568530f1b6d4001d2255e0a28d"], payload=json.dumps(payload))

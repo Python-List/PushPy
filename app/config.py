@@ -1,11 +1,12 @@
 import os
-dbhost= 'localhost'
+dbhost= '127.0.0.1'
 dbuser= 'root'
-dbpass= ''
-dbname= ''
+dbpass= 'mysql'
+dbname= 'pushpy'
 DB_URI= 'mysql://'+ dbuser + ':' + dbpass + '@' + dbhost + '/' + dbname
+#DBU_URI='sqlite:////absolute/path/to/database.txt'
 CSRF_ENABLED = True
-SECRET_KEY = '0B137449663DACC4C92289E8867CBEE7A2915B4975B013CA3DC187F14AF0B800'
+SECRET_KEY = ''
 basedir = os.path.abspath(os.path.dirname(__file__))
 OPENID_PROVIDERS = [
     { 'name': 'Google', 'url': 'https://www.google.com/accounts/o8/id' }]

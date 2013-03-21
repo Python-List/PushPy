@@ -31,7 +31,7 @@ oid = OpenID(app, os.path.join(basedir, 'tmp'))
 #Definimos el decorador que devuelve el usuario en caso de que exista
 @lm.user_loader
 def load_user(id):
-    return model.yonkiUser.query.get(int(id))
+    return model.adminUser.query.get(int(id))
 @lm.needs_refresh_handler
 def refresh():
     # do stuff

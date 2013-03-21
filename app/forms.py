@@ -7,9 +7,6 @@ class LoginForm(Form):
 
 class SendPush(Form):
     msj = TextField('msj', validators = [Required()])
-    movieID = TextField('movieID')
-    videoID = TextField('videoID')
-
 
     language = SelectField(u'language',coerce=unicode, choices=[('es', 'Espanyol'), ('en', 'Ingles')],validators = None)
 
