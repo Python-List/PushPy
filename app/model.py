@@ -26,6 +26,7 @@ class User(db.Model):
     __tablename__='user'
     userid=db.Column(db.Integer,primary_key=True)
     udid=db.Column(db.String(70),unique=True)
+    language=db.Column(db.String(70),unique=True)
     push=db.Column(db.Boolean, default=0)
     last=db.Column(db.DateTime, default=datetime.date.today())
     token=db.Column(db.String(100))

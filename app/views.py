@@ -83,8 +83,9 @@ def sendpush():
     if pushform.validate_on_submit():
         #Se envian las notificaciones
         print '>Sending notificacions'
+        devmode=pushform.devmode
         users=model.User.query.filter_by(language=pushform.language.data,push=True).all()
-        pushclass.send_push_message(users,json.dumps({"aps": {"alert" : pushform.msj.data, "badge": 0, "sound": "default"}}))
+        pushclass.send_push_message(users,devmode,json.dumps({"aps": {"alert" : pushform.msj.data, "badge": 0, "sound": "default"}}))
         return redirect(url_for('sendpush'))
     return render_template("sendpush.html",
     content={"title":"Send notifications"},
