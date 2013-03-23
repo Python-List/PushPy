@@ -7,6 +7,10 @@ class adminUser(db.Model):
     nickname = db.Column(db.String(64), unique = True)
     email = db.Column(db.String(120), unique = True)
 
+    def __init__(self, nickname=None,email=None):
+        self.email=email
+        self.nickname=nickname
+
     def is_authenticated(self):
         return True
 

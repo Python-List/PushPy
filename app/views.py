@@ -7,10 +7,8 @@ from forms import LoginForm,SendPush
 from flask_login import login_user, logout_user, current_user, login_required, fresh_login_required
 from push import pushclass
 import json
+from config import adminusers
 import threading
-
-#Inicializamos la base de datos
-db.create_all()
 
 def store_user(jsondata):
     try:

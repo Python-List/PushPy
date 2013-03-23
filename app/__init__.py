@@ -5,8 +5,8 @@ from flask.ext.login import LoginManager
 from flask_openid import OpenID
 from config import basedir
 from datetime import timedelta
-#from flask_celery import Celery
 import config
+from config import adminusers
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']= config.DB_URI
@@ -24,6 +24,7 @@ lm.needs_refresh_message = (
     u"Para proteger el acceso por favor inicia sesion de nuevo"
     )
 lm.session_protection = "strong"
+
 #Creamos el Openid
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
 

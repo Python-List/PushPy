@@ -1,12 +1,13 @@
 import os
-dbhost= '127.0.0.1'
-dbuser= 'root'
-dbpass= 'mysql'
 dbname= 'pushpy'
-DB_URI= 'mysql://'+ dbuser + ':' + dbpass + '@' + dbhost + '/' + dbname
-#DBU_URI='sqlite:////absolute/path/to/database.txt'
+DB_URI= 'sqlite:///'+ dbname + '.db'
+
 CSRF_ENABLED = True
 SECRET_KEY = ''
 basedir = os.path.abspath(os.path.dirname(__file__))
 OPENID_PROVIDERS = [
     { 'name': 'Google', 'url': 'https://www.google.com/accounts/o8/id' }]
+
+## Allowed users to send notifications ( using gmail accounts )
+adminusers=[{'nickname':'nick1','email':'nick1@gmail.com'},
+            ]
