@@ -7,7 +7,7 @@ class LoginForm(Form):
 
 class SendPush(Form):
     msj = TextField('msj', validators = [Required()])
-
+    devmode = BooleanField('devmode', default = False)
     language = SelectField(u'language',coerce=unicode, choices=[('es', 'Espanyol'), ('en', 'Ingles')],validators = None)
 
     def validate(self):

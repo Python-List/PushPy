@@ -63,6 +63,9 @@ I called both dev.pem and dist.pem ( development and production certificates ). 
 
 **In push.py you have to choose what file use dev.pem or dist.pem and what APN server depending if you are working in development mode or distribution mode**
 
+## iOS App
+The last thing is setup iOS client app to update users
+
 ## Run
 If everything is ok run server:
 > python server.py
