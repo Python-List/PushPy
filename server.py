@@ -15,5 +15,5 @@ if __name__ == '__main__':
         app.db.session.commit()
 
     #Initialize flask
-    app.app.run(port=5000,host='0.0.0.0',debug=False)
+    app.app.run(port=5000,host='0.0.0.0',debug=True)
 

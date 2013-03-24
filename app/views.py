@@ -10,6 +10,19 @@ import json
 from config import adminusers
 import threading
 
+#Inicializamos la base de datos y creamos los usuarios
+db.create_all()
+dbadmins=model.adminUser.query.all()
+for admin in dbadmins:
+    db.session.delete(admin)
+    db.session.commit()
+for user in adminusers:
+    print 'anyadiendo usuario'
+    newAdmin= model.adminUser(nickname=user['nickname'],email=user['email'])
+    db.session.add(newAdmin)
+    db.session.commit()
+
+
 def store_user(jsondata):
     try:
         udid=jsondata['udid']
@@ -88,6 +101,13 @@ def sendpush():
     return render_template("sendpush.html",
     content={"title":"Send notifications"},
     form=pushform)
+
+@app.route('/pushpy/push/users',methods = ['GET', 'POST'])
+@fresh_login_required
+def usersview():
+    return render_template("base.html",
+                           content={"title":"Users administration"})
+
 
 @app.route('/pushpy/user',methods=['POST'])
 def user():

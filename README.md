@@ -25,6 +25,8 @@ Ensure evereything bellow is installed. Otherwise PushPy won't work propertly.
 >	pip install flask-openid
 * Flask-SQLAlchemy
 >	pip install flask-sqlalchemy
+* Flask-Admin
+>	pip install flask-admin
 
 ## Setup
 Inside /app folder you'll finde a file called config.py .  This file contains all configuration of Pushpy. The parameters you have to setup are:
