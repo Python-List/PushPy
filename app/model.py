@@ -26,6 +26,7 @@ class adminUser(db.Model):
         return '<User %s>' % self.email
 
 
+
 class User(db.Model):
     __tablename__='user'
     userid=db.Column(db.Integer,primary_key=True)
