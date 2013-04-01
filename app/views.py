@@ -17,7 +17,6 @@ for admin in dbadmins:
     db.session.delete(admin)
     db.session.commit()
 for user in adminusers:
-    print 'anyadiendo usuario'
     newAdmin= model.adminUser(nickname=user['nickname'],email=user['email'])
     db.session.add(newAdmin)
     db.session.commit()
@@ -97,7 +96,7 @@ def sendpush():
         devmode=pushform.devmode
         users=model.User.query.filter_by(language=pushform.language.data,push=True).all()
         pushclass.send_push_message(users,devmode,json.dumps({"aps": {"alert" : pushform.msj.data, "badge": 0, "sound": "default"}}))
-        return redirect(url_for('sendpush'))
+    #It's not form send
     return render_template("sendpush.html",
     content={"title":"Send notifications"},
     form=pushform)

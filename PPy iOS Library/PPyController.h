@@ -11,7 +11,7 @@
 @interface PPyController : NSObject{
     
 }
-+ (PPyController *)sharedInstance;
-+(void)registerDeviceWithUserDict:(NSDictionary*)userDict;
++ (PPyController *)sharedPPy;
+-(void)registerDeviceWithUserDict:(NSDictionary*)userDict;
 
 @end

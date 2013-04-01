@@ -42,3 +42,4 @@ class User(db.Model):
         self.last=datetime.date.today()
     def __repr__(self):
         return '<User %s>' % self.username
+

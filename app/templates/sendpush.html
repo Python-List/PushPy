@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 {%  block body %}
-Wellcome to PushPy push notifications web. Please take care because if you have many users in DB and you press send notifications you can send notifications to everyone without control. ( Please choose between dev and push in your project )
 
+
+
+
+    Wellcome to PushPy push notifications web. Please take care because if you have many users in DB and you press send notifications you can send notifications to everyone without control. ( Please choose between dev and push in your project )
     The body composition is easy<br>
     - <b>Choose language:</b> You'll send the notification only to the users with the selected language.<br>
     - <b>Campo de texto:</b> Notification body<br>
     <form action="" method="post" name="sendpush" class="form-horizontal">
         <br>
         <div class="row">
-        <div class="span3 offset2">
+        <div class="span4 offset2">
         Body:<br>
         {{form.msj(size=107)}}<br>
         20 characters minimum, maximum 107<br>
@@ -30,5 +33,7 @@ Wellcome to PushPy push notifications web. Please take care because if you have 
         </div>
         <p><input type="submit" class="btn btn-large btn-block btn-primary" value="Send notification to users"></p>
     </form>
+
+
 
 {% endblock %}

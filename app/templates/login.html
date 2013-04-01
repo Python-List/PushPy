@@ -54,7 +54,7 @@
     <div class="content">
         <div class="row">
             <div class="login-form">
-                <h2>yonkiPOPS</h2>
+                <h3>pushPy</h3>
 
                 <!-- OPENID PROVIDERS-->
                 <script type="text/javascript">
@@ -74,7 +74,7 @@
 
                 <form action="" method="post" name="login">
                     {{form.hidden_tag()}}
-                        Introduce tu OpenID:<br>
+                        Enter your OpenID:<br>
                         {{form.openid(size=80)}}<br>
                         {% for error in form.errors.openid %}
                             <span style="color: #ff0000;">[{{error}}]</span>
@@ -85,13 +85,13 @@
                         <span style="color: #ff0000;">[{{message}}]</span>
                     {% endfor %}
                     {% endif %}
-                    {% endwith %}<br>
-                    |{% for pr in providers %}
-                    <a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');">Si no lo conoces usa {{pr.name}}</a> |
+                    {% endwith %}
+                    <br>|{% for pr in providers %}
+                    <a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');">If you don't know use Google {{pr.name}}</a> |
                 {% endfor %}
                     <!--<p>{{form.remember_me}} Recuérdame</p>-->
-
-                    <p><input type="submit" value="Entrar"></p>
+                    <br><br>
+                    <p><input type="submit" value="Login"></p>
                 </form>
             </div>
         </div>

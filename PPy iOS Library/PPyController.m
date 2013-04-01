@@ -12,20 +12,22 @@
     
 }
 #pragma mark - init
-+ (PPyController *)sharedInstance {
-    if (sharedInstance!=nil) {
-        return sharedInstance;
-    }
-    
-    static dispatch_once_t pred;        // Lock
-    dispatch_once(&pred, ^{             // This code is called at most once per app
-        singleton = [[SingletonClass alloc] init];
++ (PPyController *)sharedPPy {
+    static PPyController *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[self alloc] init];
     });
-    
-    return singleton;
+    return shared;
+}
+- (id)init {
+    if (self = [super init]) {
+        //someProperty = [[NSString alloc] initWithString:@"Default Property Value"];
+    }
+    return self;
 }
 
-+(void)registerDeviceWithUserDict:(NSDictionary*)userDict{
+-(void)registerDeviceWithUserDict:(NSDictionary*)userDict{
     
 }
 @end
