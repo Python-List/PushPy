@@ -25,6 +25,7 @@
 		3D63336416FF147900439C59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D63336216FF147900439C59 /* InfoPlist.strings */; };
 		3D63336716FF147900439C59 /* PPydemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63336616FF147900439C59 /* PPydemoTests.m */; };
 		3D63337316FF14C300439C59 /* PPyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63337216FF14C300439C59 /* PPyController.m */; };
+		3DCAC2441709CEDF00CF453D /* SecureUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCAC2431709CEDF00CF453D /* SecureUDID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		3D63336616FF147900439C59 /* PPydemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPydemoTests.m; sourceTree = "<group>"; };
 		3D63337116FF14C300439C59 /* PPyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPyController.h; path = "../../PPy iOS Library/PPyController.h"; sourceTree = "<group>"; };
 		3D63337216FF14C300439C59 /* PPyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPyController.m; path = "../../PPy iOS Library/PPyController.m"; sourceTree = "<group>"; };
+		3DCAC2421709CEDF00CF453D /* SecureUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecureUDID.h; path = "../../PPy iOS Library/SecureUDID.h"; sourceTree = "<group>"; };
+		3DCAC2431709CEDF00CF453D /* SecureUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecureUDID.m; path = "../../PPy iOS Library/SecureUDID.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 		3D63337016FF14A300439C59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3DCAC2421709CEDF00CF453D /* SecureUDID.h */,
+				3DCAC2431709CEDF00CF453D /* SecureUDID.m */,
 				3D63337116FF14C300439C59 /* PPyController.h */,
 				3D63337216FF14C300439C59 /* PPyController.m */,
 			);
@@ -299,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D63336716FF147900439C59 /* PPydemoTests.m in Sources */,
+				3DCAC2441709CEDF00CF453D /* SecureUDID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +487,7 @@
 				3D63336C16FF147900439C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D63336D16FF147900439C59 /* Build configuration list for PBXNativeTarget "PPydemoTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +496,7 @@
 				3D63336F16FF147900439C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

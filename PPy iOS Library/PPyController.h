@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface PPyController : NSObject{
+    NSString *serverUrlString;
     
 }
+@property (nonatomic,strong)NSString * serverUrlString;
 + (PPyController *)sharedPPy;
 -(void)registerDeviceWithUserDict:(NSDictionary*)userDict;
 
