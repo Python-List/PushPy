@@ -12,15 +12,16 @@ Pushpy is a push notification server based on Python. It's composed by a users d
 
 ## Prerequisites
 Ensure evereything bellow is installed. Otherwise PushPy won't work propertly.
-
 * Python
 * MySQL or SQLite
 * Flask:
-> 	pip install Flask
+> 	pip install flask==0.9
+* Werkzeug:
+>	pip install werkzeug==0.8.3
 * Flask-WTF:
 >	pip install Flask-WTF
 * Flask-Login
->	pip install flask-login
+>	pip install Flask-Login==0.1.3
 * Flask-OpenID
 >	pip install flask-openid
 * Flask-SQLAlchemy
